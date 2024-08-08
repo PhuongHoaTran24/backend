@@ -4,7 +4,13 @@ class SiteController {
     //GET /home
     index(req, res) {
 
-        /* Course.find({}); */
+
+/*         await MyModel.find({});
+
+        Course.find({}, function(err, courses) {
+            if (!err) res.json();
+            res.status(400).json({ error: 'ERROR!!!'})
+        }) */
         /* res.render('home'); */
     }
     //GET /news/
