@@ -4,7 +4,6 @@
   "description": "from zero to hero",
   "main": "src/index.js",
   "scripts": {
-    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write 'src/**/*.{js,json,scss}'",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,11 +21,20 @@
     "url": "https://github.com/PhuongHoaTran24/backend/issues"
   },
   "homepage": "https://github.com/PhuongHoaTran24/backend#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "dotenv": "16.4.5",
     "ejs": "3.1.10",
     "express": "4.19.2",
-    "express-handlebars": "^7.1.3"
+    "express-handlebars": "^7.1.3",
+    "mongoose": "^8.5.2"
   },
   "devDependencies": {
     "husky": "^9.1.4",
