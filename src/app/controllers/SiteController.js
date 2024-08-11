@@ -17,9 +17,9 @@ class SiteController {
 
         /* res.render('home'); */
     }
-    //GET /news/
+    //GET /search/
     search(req, res) {
-        res.send('NEW DETAIL');
+        res.render('search');
     }
 }
 
